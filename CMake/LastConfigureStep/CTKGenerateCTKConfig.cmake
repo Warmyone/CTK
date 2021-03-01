@@ -99,8 +99,6 @@ set(ctk_plugin_use_file "${CTK_SUPERBUILD_BINARY_DIR}/CTKPluginUseFile.cmake")
 ctkFunctionGeneratePluginUsefile(${ctk_plugin_use_file})
 
 
-message(FATAL_ERROR "... ${ctk_plugin_use_file}")
-
 install(
   FILES ${ctk_plugin_use_file}
   DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
@@ -185,6 +183,8 @@ if(DEFINED DCMTK_HAVE_CONFIG_H_OPTIONAL AND NOT DCMTK_HAVE_CONFIG_H_OPTIONAL AND
   set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}endif()\n")
 endif()
 set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}##################################################")
+
+message(FATAL_ERROR "${CTK_SUPERBUILD_BINARY_DIR}/CTKConfig.cmake")
 
 set(ctk_config ${CTK_SUPERBUILD_BINARY_DIR}/CTKConfig.cmake)
 
