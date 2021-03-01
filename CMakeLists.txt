@@ -238,6 +238,11 @@ foreach(file
   CMake/ctkMacroAddCtkLibraryOptions.cmake
   CMake/ctkFunctionGenerateDGraphInput.cmake
   CMake/ctkFunctionGeneratePluginManifest.cmake
+  CMake/ctkFunctionGetPluginDependencies.cmake
+  CMake/ctkFunctionGetTargetDependencies.cmake
+  CMake/ctkMacroSetupPlugins.cmake
+  CMake/ctkFunctionGetAllPluginTargets.cmake
+  CMake/ctkFunctionExtractPluginTargets.cmake
   CMake/ctkFunctionGeneratePluginUseFile.cmake
   CMake/ctkMacroGeneratePluginResourceFile.cmake
   CMake/ctkFunctionAddPluginRepo.cmake
