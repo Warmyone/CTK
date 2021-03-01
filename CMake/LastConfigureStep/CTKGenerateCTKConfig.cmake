@@ -184,7 +184,7 @@ if(DEFINED DCMTK_HAVE_CONFIG_H_OPTIONAL AND NOT DCMTK_HAVE_CONFIG_H_OPTIONAL AND
 endif()
 set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}##################################################")
 
-message(FATAL_ERROR "${CTK_SUPERBUILD_BINARY_DIR}/CTKConfig.cmake")
+message(FATAL_ERROR "${INSTALL_PREFIX} // ${CTK_SUPERBUILD_BINARY_DIR}")
 
 set(ctk_config ${CTK_SUPERBUILD_BINARY_DIR}/CTKConfig.cmake)
 
