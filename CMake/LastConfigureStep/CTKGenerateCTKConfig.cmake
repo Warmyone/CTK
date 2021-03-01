@@ -38,6 +38,8 @@
 # one for installation.  The file tells external projects how to use CTK.
 #
 
+message(FATAL_ERROR "... ${CTK_INSTALL_CMAKE_DIR}")
+
 message(STATUS "Including CMake built-in module CMakePackageConfigHelpers")
 include(CMakePackageConfigHelpers OPTIONAL)
 if(COMMAND configure_package_config_file)
