@@ -264,7 +264,7 @@ configure_package_config_file(
 
 install(
   FILES ${ctk_install_config}
-  DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
+  DESTINATION ${CTK_INSTALL_CMAKE_DIR}
   )
 
 #-----------------------------------------------------------------------------
