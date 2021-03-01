@@ -263,8 +263,8 @@ configure_package_config_file(
   )
 
 install(
-  FILES ${CMAKE_SOURCE_DIR}/CMake/CTKConfig.cmake.in
-  DESTINATION "${CMAKE_INSTALL_PREFIX}/${CTK_INSTALL_CMAKE_DIR}"
+  FILES ${ctk_install_config}
+  DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
   )
 
 #-----------------------------------------------------------------------------
@@ -278,5 +278,5 @@ write_basic_package_version_file(
 
 install(
   FILES ${ctk_config_version}
-  DESTINATION "${CMAKE_INSTALL_PREFIX}/${CTK_INSTALL_CMAKE_DIR}" COMPONENT Development
+  DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
   )
