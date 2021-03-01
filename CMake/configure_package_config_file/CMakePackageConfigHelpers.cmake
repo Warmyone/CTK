@@ -225,6 +225,7 @@ function(CONFIGURE_PACKAGE_CONFIG_FILE _inputFile _outputFile)
 
   file(RELATIVE_PATH PACKAGE_RELATIVE_PATH "${absInstallDir}" "${CMAKE_INSTALL_PREFIX}" )
 
+  message(FATAL_ERROR "... wir sind doch Hier?")
   foreach(var ${CCF_PATH_VARS})
     if(NOT DEFINED ${var})
       message(FATAL_ERROR "Variable ${var} does not exist")

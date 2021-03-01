@@ -29,8 +29,6 @@ foreach(p
   endif()
 endforeach()
 
-message(FATAL_ERROR "ooooook!")
-
 #-----------------------------------------------------------------------------
 # Superbuild
 #
