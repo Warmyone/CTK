@@ -262,6 +262,7 @@ configure_package_config_file(
   NO_CHECK_REQUIRED_COMPONENTS_MACRO
   )
 
+  install(CODE "MESSAGE(\" \${CMAKE_INSTALL_PREFIX} \")")
 install(
   FILES ${ctk_install_config}
   DESTINATION ${CTK_INSTALL_CMAKE_DIR}
