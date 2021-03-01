@@ -26,7 +26,7 @@
 
 #-----------------------------------------------------------------------------
 # Make sure ${CTK_BINARY_DIR}/CTK-build/bin exists
-# May be used by some external project to install libs 
+# May be used by some external project to install libs
 if(NOT EXISTS ${CTK_BINARY_DIR}/CTK-build/bin)
   file(MAKE_DIRECTORY ${CTK_BINARY_DIR}/CTK-build/bin)
 endif()
@@ -54,7 +54,7 @@ ExternalProject_Add(${proj}
     ${ep_cxx_standard_arg}
   SOURCE_DIR ${CTK_SOURCE_DIR}
   BINARY_DIR ${CTK_BINARY_DIR}/CTK-build
-  INSTALL_COMMAND ""
+  #INSTALL_COMMAND ""
   DEPENDS
     ${CTK_DEPENDENCIES}
   )
