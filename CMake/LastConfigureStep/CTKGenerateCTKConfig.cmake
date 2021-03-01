@@ -41,8 +41,10 @@
 message(STATUS "Including CMake built-in module CMakePackageConfigHelpers")
 include(CMakePackageConfigHelpers OPTIONAL)
 if(COMMAND configure_package_config_file)
+  message(FATAL_ERROR "found the module")
   message(STATUS "Including CMake built-in module CMakePackageConfigHelpers - ok")
 else()
+  message(FATAL_ERROR "CUSTUM CUSTUM GARBAGE!!11!")
   message(STATUS "Including CMake built-in module CMakePackageConfigHelpers - failed")
   message(STATUS "Including CTK module CMakePackageConfigHelpers")
   list(APPEND CMAKE_MODULE_PATH ${CTK_CMAKE_DIR}/configure_package_config_file)
@@ -202,7 +204,7 @@ configure_package_config_file(
 # CTK external projects. We rely on externally set
 # _DIR variables or a proper CMAKE_PREFIX_PATH such
 # that find_dependency/find_package can successfully
-# find the external project. 
+# find the external project.
 set(CTK_SUPERBUILD_EP_VARS_CONFIG)
 foreach(varname ${CTK_EP_LABEL_FIND_PACKAGE})
   string(REPLACE "_DIR" "" package_name "${varname}")
