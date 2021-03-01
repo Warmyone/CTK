@@ -246,7 +246,7 @@ set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}#########################################
 set(ctk_install_config ${CMAKE_BINARY_DIR}/CMakeFiles/CTKConfig.cmake)
 
 
-message(FATAL_ERROR "${CMAKE_INSTALL_PREFIX} // ${CTK_INSTALL_CMAKE_DIR}")
+message(WARNING "${CMAKE_INSTALL_PREFIX} // ${CTK_INSTALL_CMAKE_DIR}")
 
 configure_package_config_file(
   ${CMAKE_SOURCE_DIR}/CMake/CTKConfig.cmake.in
@@ -264,7 +264,7 @@ configure_package_config_file(
 
 install(
   FILES ${ctk_install_config}
-  DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
+  DESTINATION "${CMAKE_INSTALL_PREFIX}/${CTK_INSTALL_CMAKE_DIR}" COMPONENT Development
   )
 
 #-----------------------------------------------------------------------------
@@ -278,5 +278,5 @@ write_basic_package_version_file(
 
 install(
   FILES ${ctk_config_version}
-  DESTINATION ${CTK_INSTALL_CMAKE_DIR} COMPONENT Development
+  DESTINATION "${CMAKE_INSTALL_PREFIX}/${CTK_INSTALL_CMAKE_DIR}" COMPONENT Development
   )
