@@ -184,7 +184,7 @@ if(DEFINED DCMTK_HAVE_CONFIG_H_OPTIONAL AND NOT DCMTK_HAVE_CONFIG_H_OPTIONAL AND
 endif()
 set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}##################################################")
 
-message(WARNING "${INSTALL_PREFIX} // ${CTK_SUPERBUILD_BINARY_DIR}")
+message(WARNING "${CMAKE_INSTALL_PREFIX} // ${CTK_SUPERBUILD_BINARY_DIR}")
 
 set(ctk_config ${CTK_SUPERBUILD_BINARY_DIR}/CTKConfig.cmake)
 
@@ -246,7 +246,7 @@ set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}#########################################
 set(ctk_install_config ${CMAKE_BINARY_DIR}/CMakeFiles/CTKConfig.cmake)
 
 
-message(FATAL_ERROR "${INSTALL_PREFIX} // ${CTK_INSTALL_CMAKE_DIR}")
+message(FATAL_ERROR "${CMAKE_INSTALL_PREFIX} // ${CTK_INSTALL_CMAKE_DIR}")
 
 configure_package_config_file(
   ${CMAKE_SOURCE_DIR}/CMake/CTKConfig.cmake.in
