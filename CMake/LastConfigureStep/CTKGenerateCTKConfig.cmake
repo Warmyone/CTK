@@ -245,6 +245,9 @@ set(CTK_CONFIG_CODE "${CTK_CONFIG_CODE}#########################################
 
 set(ctk_install_config ${CMAKE_BINARY_DIR}/CMakeFiles/CTKConfig.cmake)
 
+
+message(FATAL_ERROR "${INSTALL_PREFIX} // ${CTK_INSTALL_CMAKE_DIR}")
+
 configure_package_config_file(
   ${CMAKE_SOURCE_DIR}/CMake/CTKConfig.cmake.in
   ${ctk_install_config}
