@@ -38,7 +38,7 @@
 # one for installation.  The file tells external projects how to use CTK.
 #
 
-message(FATAL_ERROR "... ${CTK_INSTALL_CMAKE_DIR}")
+message(WARNING "... ${CTK_INSTALL_CMAKE_DIR}")
 
 message(STATUS "Including CMake built-in module CMakePackageConfigHelpers")
 include(CMakePackageConfigHelpers OPTIONAL)
@@ -98,6 +98,9 @@ install(
 # Generate a file containing plugin specific variables
 set(ctk_plugin_use_file "${CTK_SUPERBUILD_BINARY_DIR}/CTKPluginUseFile.cmake")
 ctkFunctionGeneratePluginUsefile(${ctk_plugin_use_file})
+
+
+message(FATAL_ERROR "... ${ctk_plugin_use_file}")
 
 install(
   FILES ${ctk_plugin_use_file}
