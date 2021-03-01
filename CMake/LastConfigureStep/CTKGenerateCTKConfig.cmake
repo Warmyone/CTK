@@ -263,7 +263,7 @@ configure_package_config_file(
   )
 
 install(
-  FILES ${ctk_install_config}
+  FILES ${CMAKE_SOURCE_DIR}/CMake/CTKConfig.cmake.in
   DESTINATION "${CMAKE_INSTALL_PREFIX}/${CTK_INSTALL_CMAKE_DIR}"
   )
 
